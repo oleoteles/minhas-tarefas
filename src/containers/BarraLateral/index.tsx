@@ -6,7 +6,6 @@ import { RootReducer } from '../../store'
 import { alterarTermo } from '../../store/reducers/filtro'
 
 import * as S from './styles'
-import * as enums from '../../Utils/enums/Tarefa'
 import { Botao, Campo } from '../../styles'
 
 type Props = {
@@ -23,18 +22,25 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
       <div>
         {mostrarFiltros ? (
           <>
-        <Campo type="text" placeholder="Buscar" value={termo} onChange={(evento) => dispatch(alterarTermo(evento.target.value))}/>
-        <S.Filtros>
-          <FiltroCard valor={enums.Status.PENDENTE} criterio='status' legenda='pendentes' />
-          <FiltroCard valor={enums.Status.CONCLUIDA} criterio='status' legenda='concluídas' />
-          <FiltroCard valor={enums.Prioridade.URGENTE} criterio='prioridade' legenda='urgentes' />
-          <FiltroCard valor={enums.Prioridade.IMPORTANTE} criterio='prioridade' legenda='importantes' />
-          <FiltroCard valor={enums.Prioridade.NORMAL} criterio='prioridade' legenda='normal' />
-          <FiltroCard criterio='todas' legenda='todas' />
-        </S.Filtros>
-        </>
+            <Campo
+              type="text"
+              placeholder="Buscar"
+              value={termo}
+              onChange={(evento) => dispatch(alterarTermo(evento.target.value))}
+            />
+            <S.Filtros>
+              <FiltroCard criterio="favoritos" legenda="favoritos" />
+              <FiltroCard criterio="família" legenda="família" />
+              <FiltroCard criterio="amigos" legenda="amigos" />
+              <FiltroCard criterio="trabalho" legenda="trabalho" />
+              <FiltroCard criterio="urgentes" legenda="urgentes" />
+              <FiltroCard criterio="todos" legenda="todos" />
+            </S.Filtros>
+          </>
         ) : (
-          <Botao onClick={() => navigate('/')}>Voltar à lista de tarefas</Botao>
+          <Botao onClick={() => navigate('/')}>
+            Voltar à agenda de contatos
+          </Botao>
         )}
       </div>
     </S.Aside>

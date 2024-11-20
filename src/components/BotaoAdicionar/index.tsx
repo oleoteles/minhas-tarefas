@@ -1,4 +1,4 @@
-import { Circulo } from "./styles"
+import { Circulo } from './styles'
 
 const BotaoAdicionar = () => <Circulo to="/novo">+</Circulo>
 

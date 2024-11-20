@@ -12,4 +12,3 @@ export const Filtros = styled.div`
   grid-gap: 8px;
   margin-top: 16px;
 `
-

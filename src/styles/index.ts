@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import variaveis from './variaveis'
 
-
 const EstiloGlobal = createGlobalStyle`
   * {
     margin: 0
@@ -38,7 +37,6 @@ export const Campo = styled.input`
   font-weight: bold;
   color: #666666;
   border-color: #666666;
-  width: 100%;
 `
 
 export const Botao = styled.button`

@@ -1,31 +1,21 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Form = styled.form`
-  max-width: 547px;
+  max-width: 600px;
   width: 100%;
   font-weigth: bold;
   font-size: 14px;
   color: #66666;
-
-  textarea {
-    resize: none;
-    margin: 16px 0;
-  }
 `
 
-export const Opcoes = styled.div`
-  margin-bottom: 16px;
-
-  p {
-    margin-bottom: 6px;
-  }
-
-  label {
-    margin-right: 6px;
-  }
-`
-
-export const Opcao = styled.div`
-  display: inline;
-  text-transform: capitalize;
+export const NovoContato = styled.input`
+  width: 80%;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #666666;
+  border-color: #666666;
+  display: block;
+  margin-bottom: 8px;
 `
